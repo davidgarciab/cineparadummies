@@ -1,0 +1,13 @@
+ {% extends 'review/base.html' %}
+
+    {% block content %}
+        <div class="review">
+            {% if review.created_date %}
+                <div class="date">
+                    {{ review.created_date }}
+                </div>
+            {% endif %}
+            <h1>{{ review.film }}</h1>
+            <p>{{ review.text|linebreaks }}</p>
+        </div>
+    {% endblock %}
