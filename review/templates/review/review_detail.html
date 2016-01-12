@@ -2,6 +2,7 @@
 
     {% block content %}
         <div class="review">
+        	<a class="btn btn-default" href="{% url 'review_edit' pk=review.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
             {% if review.created_date %}
                 <div class="date">
                     {{ review.created_date }}
